@@ -1,29 +1,24 @@
 variable "project_id" {
-  description = "ID del proyecto GCP"
+  description = "GCP Project ID"
   type        = string
 }
 
 variable "region_name" {
-  description = "Región para los recursos"
+  description = "GCP Region"
   type        = string
 }
 
 variable "github_user" {
-  description = "Usuario GitHub para imagen del container"
+  description = "GitHub username"
   type        = string
 }
 
 variable "artifact_registry_image" {
-  description = "Nombre de la imagen en Artifact Registry"
+  description = "Docker image from Artifact Registry"
   type        = string
 }
 
 variable "vm_list" {
-  description = "Lista de máquinas virtuales a crear"
-  type = list(object({
-    name         = string
-    machine_type = string
-    zone         = string
-    image        = string
-  }))
+  description = "List of VM configurations"
+  type        = list(any)
 }
