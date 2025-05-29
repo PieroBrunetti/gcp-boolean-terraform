@@ -1,0 +1,14 @@
+[
+  {
+    "name": "vm-1",
+    "machine_type": "e2-medium",
+    "disk_size": 10,
+    "tags": ["http", "https", "app-website-instance"]
+  },
+  {
+    "name": "vm-2",
+    "machine_type": "e2-small",
+    "disk_size": 10,
+    "tags": ["http", "https", "app-website-instance"]
+  }
+]
