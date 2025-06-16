@@ -4,8 +4,10 @@ variable "vm_list" {
     machine_type = string
     zone         = string
     image        = string
+    tags         = list(string)   # <- AÑADIR ESTA LÍNEA
   }))
 }
+
 
 variable "project_id" {
   type = string

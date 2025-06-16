@@ -1,4 +1,3 @@
-# Crea la cuenta de servicio solo si se especifica un nombre
 resource "google_service_account" "vm_sa" {
   count        = var.vm_service_account_name != "" ? 1 : 0
   account_id   = var.vm_service_account_name
