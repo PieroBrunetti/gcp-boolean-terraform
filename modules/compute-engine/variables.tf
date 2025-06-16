@@ -4,10 +4,9 @@ variable "vm_list" {
     machine_type = string
     zone         = string
     image        = string
-    tags         = list(string)   # <- AÑADIR ESTA LÍNEA
+    tags         = list(string)
   }))
 }
-
 
 variable "project_id" {
   type = string
@@ -16,4 +15,5 @@ variable "project_id" {
 variable "vm_service_account_name" {
   description = "Nombre de la cuenta de servicio para las VMs"
   type        = string
+  default     = ""
 }

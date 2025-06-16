@@ -1,12 +1,3 @@
-##vm_list = [
-##  {
-##    name         = "vm-1"
-##    machine_type = "e2-medium"
-##    zone         = "us-central1-a"
-##    image        = "debian-cloud/debian-12"
-##    
-##  }
-##]
-
-
-
+project_id              = "curso-devops-402315"
+region_name             = "us-central1"
+vm_service_account_name = "vm-service-account"
