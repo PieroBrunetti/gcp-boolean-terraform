@@ -30,9 +30,14 @@ resource "google_compute_instance" "vm" {
     scopes = ["cloud-platform"]
   }
 
+  tags = each.value.tags
+
   metadata_startup_script = <<-EOT
     #!/bin/bash
-    docker-credential-gcr configure-docker
+    apt-get update
+    apt-get install -y docker.io
+    systemctl enable docker
+    systemctl start docker
     docker run -d ${each.value.image}
   EOT
 }
