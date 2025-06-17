@@ -37,6 +37,6 @@ resource "google_compute_instance" "vm" {
     apt-get install -y docker.io
     systemctl enable docker
     systemctl start docker
-    docker run -d ${each.value.image}
+    docker run -d -p 80:80 ${each.value.docker_image}
   EOT
 }

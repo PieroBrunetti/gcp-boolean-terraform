@@ -4,21 +4,15 @@
     "machine_type": "e2-medium",
     "zone": "us-central1-a",
     "image": "debian-cloud/debian-12",
-    "tags": [
-      "http",
-      "https",
-      "app-website-instance"
-    ]
+    "tags": ["http", "https", "app-website-instance"],
+    "docker_image": "nginx"
   },
   {
     "name": "vm-2",
     "machine_type": "e2-small",
     "zone": "us-central1-a",
     "image": "debian-cloud/debian-12",
-    "tags": [
-      "http",
-      "https",
-      "app-website-instance"
-    ]
+    "tags": ["http", "https", "app-website-instance"],
+    "docker_image": "nginx"
   }
 ]
